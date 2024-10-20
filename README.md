@@ -7,33 +7,31 @@ Este projeto foi desenvolvido como parte da disciplina de Processamento de Lingu
 
 O assistente tem como objetivo auxiliar estudantes a se prepararem para o ENEM, permitindo a criação de planos de estudo personalizados, sugerindo questões diárias, e analisando tópicos mais recorrentes nas provas anteriores.
 
-## Instalação
+## Como Utilizar o Projeto no Google Colab
 
-1. **Clonar o repositório**
+### 1. Abrir o Projeto no Google Colab
+- Faça o download do arquivo `.ipynb` deste repositório ou clone diretamente o repositório no Google Colab utilizando o seguinte comando:
+  ```bash
+  !git clone https://github.com/seu-usuario/projeto-enem.git
+  ```
+  
+### 2. Configurar a API Key da OpenAI
+Após clonar o repositório, será necessário configurar a chave da API da OpenAI para permitir que o sistema interaja com o modelo LLM. Insira o seguinte comando no início do notebook:
+```python
+import os
+os.environ["OPENAI_API_KEY"] = "sua-chave-api"
+```
+Substitua `"sua-chave-api"` pela sua chave de acesso.
 
-   ```bash
-   git clone https://github.com/seu-usuario/enem-study-assistant.git
-   cd enem-study-assistant
-   ```
+### 3. Execução do Notebook
+Depois de configurar sua chave de API, basta executar o notebook. As dependências necessárias serão instaladas automaticamente durante a execução, o upload dos arquivos de provas e gabaritos será realizado e o projeto estará pronto para uso.
 
-2. **Instalar as dependências**
+### 4. Execução das Funcionalidades
+Após configurar as dependências e realizar o upload dos arquivos, o usuário poderá interagir com as seguintes opções no menu do projeto:
 
-   Use o `pip` para instalar as dependências listadas no arquivo `requirements.txt`:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Configurar a chave da API do OpenAI**
-
-   O projeto utiliza a API do OpenAI para realizar as operações de NLP e agentes. Você precisará de uma chave API para rodar o projeto.
-
-   - Acesse [OpenAI API](https://platform.openai.com/) para criar uma chave.
-   - Crie um arquivo `.env` na raiz do projeto com o seguinte conteúdo:
-
-   ```bash
-   OPENAI_API_KEY=your_openai_api_key
-   ```
+- **Analisar Provas**: O sistema fará a análise das questões e gabaritos de acordo com o ano e os tópicos escolhidos.
+- **Gerar Plano de Estudos**: O sistema vai sugerir um plano de estudos baseado nos tópicos mais frequentes e nas necessidades do usuário.
+- **Sugestões Diárias**: O sistema vai sugerir uma lista de assuntos e questões diárias para revisão.
 
 ## Funcionalidades
 
@@ -97,34 +95,11 @@ O projeto oferece várias funcionalidades que podem ser acessadas por meio de um
    - Questão 2: Probabilidade - ENEM 2019
    ```
 
-## Estrutura de Pastas
-
-A estrutura de pastas do projeto foi organizada para facilitar a localização dos arquivos e modularizar as funcionalidades:
-
-```
-enem-study-assistant/
-│
-├── data/                     # Provas e gabaritos do ENEM organizados por ano
-│   ├── provas/
-│   └── gabaritos/
-│
-├── notebooks/                # Notebooks de implementação do projeto
-│   ├── agent_research.ipynb   # Implementação dos agentes de busca e sugestão
-│   └── training_plan.ipynb    # Notebook para criação de planos de estudo
-│
-├── scripts/                  # Scripts auxiliares do projeto
-│   └── pdf_extraction.py      # Script de extração de dados dos PDFs
-│
-├── requirements.txt          # Arquivo com as dependências do projeto
-├── README.md                 # Arquivo atual (documentação do projeto)
-└── LICENSE                   # Licença do projeto
-```
-
 ## Testando a Aplicação
 
 Após a instalação das dependências e a configuração da chave API do OpenAI, você pode testar as funcionalidades principais seguindo os passos abaixo:
 
-1. Abra um dos notebooks na pasta `notebooks/`.
+1. Clone ou realize o download do arquivo no Google Collab.
 2. Execute as células e siga as instruções interativas para acessar os diferentes recursos.
 3. Teste cada funcionalidade (pesquisa de tópicos, plano de estudo, sugestão de questões).
 
@@ -142,6 +117,6 @@ Caso tenha dúvidas ou sugestões, entre em contato:
 
 - **Nome**: Pedro Arthur de Oliveira Barreto
 - **Email**: pedroarthurbarreto28@gmail.com
-- **LinkedIn**: [Seu LinkedIn]([https://linkedin.com/in/seu-perfil](https://www.linkedin.com/in/pedro-arthur-barreto/))
+- **LinkedIn**: [pedroarthurbarreto]([https://linkedin.com/in/seu-perfil](https://www.linkedin.com/in/pedro-arthur-barreto/))
 
 Sinta-se à vontade para contribuir com o projeto ou compartilhar feedback!
