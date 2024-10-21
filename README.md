@@ -12,7 +12,7 @@ O assistente tem como objetivo auxiliar estudantes a se prepararem para o ENEM, 
 ### 1. Abrir o Projeto no Google Colab
 - Faça o download do arquivo `.ipynb` deste repositório ou clone diretamente o repositório no Google Colab utilizando o seguinte comando:
   ```bash
-  !git clone https://github.com/seu-usuario/projeto-enem.git
+  !git clone https://github.com/pedroarthurob/NLP-FinalProject.git
   ```
   
 ### 2. Configurar a API Key da OpenAI
